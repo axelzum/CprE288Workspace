@@ -18,12 +18,37 @@ int main(void) {
     // Hint: You may need to use pointers to return the button that has been pressed
 
     lcd_init();
-    button_init();
-    init_button_interrupts(button_event, button_num);
+    uart_init();
+
 
     while(1) {
+       char data[21];
+       int count =0;
 
-       lcd_printf("%d", button_num);
+       while(count<21){
+
+           data[count] = uart_receive();
+
+           if(data[count]== '\r' ){
+               data[count]= '\0';
+
+               lcd_printf("%s %d, %s %c", "index=", count,"char=", data[count]);
+
+               break;
+           }
+           else{
+               uart_sendChar(data[count]);
+               lcd_printf("%s %d, %s %c", "index=", count,"char=", data[count]);
+               count++;
+           }
+
+
+       }
+        data[20] = '\0';
+       lcd_printf("%s", data);
+
+
+
 
     }
 

@@ -35,15 +35,22 @@ void uart_init(void) {
     UART1_CC_R = 0; //Use system clock as UART clock source
 
     //Set frame format: 1 start bit, 8databits, an odd parity bit, and 1 stop bit
-    UART1_LCRH_R = 0b;//TODO
+    UART1_LCRH_R = (UART1_LCRH_R |0b11110110) & 0xFFFFFFF6;                                                              // 0b11110110
 
-    //Setup UART0 interrupts
+    //Setup UART1 interrupts
     UART1_ICR_R |= 0b00010000; // Clear RX interrupt status flag
     UART1_IM_R  |= 0b00010000; // Enable RX interrupts
 
     //Configure NVIC to allow UART interrupts
-    NVIC_PRI1_R |= 0x00002000;//Set UART1 IRQ pri to 1(bits 15-13)
-    NVIC_EN0_R |= 0x_______________;//Enable UART0 IRQ (IRQ 5)
+    NVIC_PRI1_R |= 0x00020000;//Set UART1 pri to 1
+    NVIC_EN0_R  |= 0x00000040;//Enable UART1
+
+
+    IntRegister(INT_UART1, UART1_handler);
+
+    //Re-enable UART1
+    UART1_CTL_R = UART1_CTL_R | 0x01;
+    IntMasterEnable(); //Globally allows CPU to service interrupts
 }
 
 
@@ -51,15 +58,23 @@ void uart_init(void) {
 void UART1_handler() {
 
     // Clear interrupt status register
-    GPIO_PORTE_ICR_R |= 0b00000000000000000000000000111111;
-    button_event = 1;
-    button_num = button_getButton();
+
 }
 
 void uart_sendChar(char data) {
 
+    while(UART1_FR_R & 0x20){
+
+    }
+    UART1_DR_R  = data;
 }
 
 char uart_receive(void) {
+    char data =0;
 
+    while(UART1_FR_R & UART_FR_RXFE){
+
+    }
+    data =(char)(UART1_DR_R & 0xFF);
+    return data;
 }
