@@ -20,14 +20,9 @@ int main(void) {
     button_init();
     init_button_interrupts(button_event, button_num);
 
-    char print[] = {'T', 'e', 's', 't'};
-
     while(1) {
 
        lcd_printf("%d", button_num);
-
-
-        //lcd_rotatingBanner(print);
 
     }
 
