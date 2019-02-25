@@ -1,6 +1,7 @@
 #include "uart.h"
 #include "lcd.h"
-
+#include "movement.h"
+#include "open_interface.h"
 #define BIT0 0x01
 #define BIT1 0x02
 #define BIT2 0x04
@@ -59,11 +60,15 @@ void uart_init(void) {
 void UART1_handler() {
 
    // if()
-    UART1_ICR_R |= 0b10000;
-    char data = uart_receive();
+//    UART1_ICR_R |= 0b10000;
+//   char data = uart_receive();
+//   lcd_printf("%c", data);
+//   uart_sendChar( data);
 
-    lcd_printf("%c", data);
-    uart_sendChar(data);
+
+
+
+
 }
 
 void uart_sendChar(char data) {
