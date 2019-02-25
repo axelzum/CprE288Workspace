@@ -1,4 +1,5 @@
 #include "uart.h"
+#include "lcd.h"
 
 #define BIT0 0x01
 #define BIT1 0x02
@@ -27,15 +28,15 @@ void uart_init(void) {
     UART1_CTL_R &= ~UART_CTL_UARTEN;
 
     // Set desired UART functionality
-    UART1_CTL_R = 0b001000000000;
+    UART1_CTL_R = 0b001100000000;
 
-    //Set baud rate (9600 Baud)
-    UART1_IBRD_R = 104; //16,000,000 / (16 * 9600) = 104.16666
-    UART1_FBRD_R = 11;  // .1666*64+.5 = 11.16666
+    //Set baud rate (115200 Baud)
+    UART1_IBRD_R = 8; //16,000,000 / (16 * 115200) = 8.44
+    UART1_FBRD_R = 44;
     UART1_CC_R = 0; //Use system clock as UART clock source
 
     //Set frame format: 1 start bit, 8databits, an odd parity bit, and 1 stop bit
-    UART1_LCRH_R = (UART1_LCRH_R |0b11110110) & 0xFFFFFFF6;                                                              // 0b11110110
+    UART1_LCRH_R = (UART1_LCRH_R |0b11110010) & 0xFFFFFFF2;
 
     //Setup UART1 interrupts
     UART1_ICR_R |= 0b00010000; // Clear RX interrupt status flag
@@ -57,8 +58,12 @@ void uart_init(void) {
 //TODO
 void UART1_handler() {
 
-    // Clear interrupt status register
+   // if()
+    UART1_ICR_R |= 0b10000;
+    char data = uart_receive();
 
+    lcd_printf("%c", data);
+    uart_sendChar(data);
 }
 
 void uart_sendChar(char data) {
@@ -67,12 +72,13 @@ void uart_sendChar(char data) {
 
     }
     UART1_DR_R  = data;
+
 }
 
 char uart_receive(void) {
     char data =0;
 
-    while(UART1_FR_R & UART_FR_RXFE){
+  while(UART1_FR_R & UART_FR_RXFE){
 
     }
     data =(char)(UART1_DR_R & 0xFF);

@@ -22,32 +22,36 @@ int main(void) {
 
 
     while(1) {
-       char data[21];
-       int count =0;
-
-       while(count<21){
-
-           data[count] = uart_receive();
-
-           if(data[count]== '\r' ){
-               data[count]= '\0';
-
-               lcd_printf("%s %d, %s %c", "index=", count,"char=", data[count]);
-
-               break;
-           }
-           else{
-               uart_sendChar(data[count]);
-               lcd_printf("%s %d, %s %c", "index=", count,"char=", data[count]);
-               count++;
-           }
-
-
-       }
-        data[20] = '\0';
-       lcd_printf("%s", data);
-
-
+//       char data[21];
+//       int count =0;
+////       data[1] ='r';
+////       uart_sendChar(data[1]);
+//
+//       while(count<21){
+//
+//          data[count] = uart_receive();
+//
+//           if(data[count]== '\r' ){
+//               data[count]= '\0';
+//               uart_sendChar('\r');
+//               uart_sendChar('\n');
+//               lcd_printf("%s %d, %s %c", "index=", count,"char=", data[count]);
+//
+//               break;
+//           }
+//           else{
+//
+//               uart_sendChar(data[count]);
+//               lcd_printf("%s %d, %s %c", "index=", count,"char=", data[count]);
+//               count++;
+//           }
+//
+//
+//       }
+//        data[20] = '\0';
+//       lcd_printf("%s", data);
+//
+//
 
 
     }

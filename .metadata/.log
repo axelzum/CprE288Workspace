@@ -1090,3 +1090,215 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.cdt.core 1 0 2019-02-21 14:08:57.817
 !MESSAGE Indexed 'Lab4' (6 sources, 16 headers) in 0.485 sec: 535 declarations; 1,221 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+!SESSION 2019-02-24 20:12:39.551 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product -data U:\Cpre288\cpre288workspace\cpre288workspace -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2019-02-24 20:12:41.113
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2019-02-24 20:12:41.145
+!MESSAGE debugServerDir=C:/ti/ccsv8/ccs_base/DebugServer
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 20:12:50.148
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 20:12:50.164
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 20:12:50.166
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 20:18:55.925
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: U:\Cpre288\cpre288workspace\cpre288workspace\Lab4\Debug\Lab4.out Could not open file
+
+!SESSION 2019-02-24 21:19:31.579 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2019-02-24 21:19:32.723
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2019-02-24 21:19:32.739
+!MESSAGE debugServerDir=C:/ti/ccsv8/ccs_base/DebugServer
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 21:19:39.696
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 21:19:39.696
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 21:19:39.712
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2019-02-24 21:20:40.803 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2019-02-24 21:20:41.972
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2019-02-24 21:20:41.976
+!MESSAGE debugServerDir=C:/ti/ccsv8/ccs_base/DebugServer
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 21:20:48.896
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 21:20:48.896
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 21:20:48.912
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2019-02-24 21:24:59.409 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2019-02-24 21:25:00.546
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2019-02-24 21:25:00.561
+!MESSAGE debugServerDir=C:/ti/ccsv8/ccs_base/DebugServer
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 21:25:07.252
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 21:25:07.268
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-02-24 21:25:07.284
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:13.166
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d000 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:13.182
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d004 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:13.182
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d004 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:13.182
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d018 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:13.647
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d020 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:13.647
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d024 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:13.647
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d028 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:14.782
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d02c on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:14.782
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d030 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:14.782
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d034 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.193
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d000 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.193
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d004 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.193
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d004 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.209
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d018 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.209
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d020 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.209
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d024 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.224
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d028 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.224
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d02c on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.224
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d030 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.240
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d034 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.987
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d000 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:18.987
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d004 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:19.002
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d004 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:19.002
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d018 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:19.018
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d020 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:19.018
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d024 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:19.018
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d028 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:19.034
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d02c on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:19.034
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d030 on Page 0 of Length 0x4: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2019-02-24 22:17:19.034
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Memory Block at 0x4000d034 on Page 0 of Length 0x4: Debug Port error occurred.
+
