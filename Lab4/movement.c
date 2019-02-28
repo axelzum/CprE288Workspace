@@ -75,9 +75,7 @@ void move_backward(oi_t *sensor, int centimeters) {
 void turn_right(oi_t *sensor, double degrees) {
     double sum = 0;
 
-    degrees = degrees + 4;
-
-    oi_setWheels(-400, 400);
+    oi_setWheels(-300, 300);
 
     while (sum > -1 * degrees) {
         oi_update(sensor);
@@ -102,9 +100,7 @@ void turn_right(oi_t *sensor, double degrees) {
 void turn_left(oi_t *sensor, double degrees) {
         double sum = 0;
 
-        degrees = degrees + 4;
-
-        oi_setWheels(400, -400);
+        oi_setWheels(300, -300);
 
         while (sum < degrees) {
             oi_update(sensor);

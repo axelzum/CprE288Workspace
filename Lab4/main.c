@@ -4,64 +4,131 @@
 #include "movement.h"
 #include <stdio.h>
 #include <string.h>
-// Your code can use the global variables defined in button.c: button_event, button_num
-// They are declared with the extern qualifier in button.h, which makes the variables visible to this file.
 
 
 /**
  * @file main.c
  *
- * Prints the button that has been pressed
+ * Robot recieves data from UART to drive robot.
  *
  * @author Axel Zumwalt, Allan Juarez
- * @date 2/14/19
+ * @date 2/21/19
  */
 int main(void) {
-    // Hint: You may need to use pointers to return the button that has been pressed
 
     lcd_init();
     uart_init();
+
     oi_t *sensor_data = oi_alloc();
-       oi_init(sensor_data);
+    oi_init(sensor_data);
 
-    while(1) {
-       char data[21];
-       int count =0;
-      data[1] ='r';
-       uart_sendChar(data[1]);
+    //Part 1
+//    while(1) {
+//        char data[21];
+//        int data_index = 0;
+//
+//        while(data_index < 20){
+//
+//            data[data_index] = uart_receive();
+//
+//            if(data[data_index] == '\r' ){
+//                data[data_index] = '\0';
+//                //uart_sendChar('\r');
+//                //uart_sendChar('\n');
+//
+//                lcd_printf("Index=%d, Char=%c", data_index, data[data_index]);
+//
+//                break;
+//            }
+//            else{
+//                //uart_sendChar(data[data_index]);
+//                lcd_printf("Index=%d, Char=%c", data_index, data[data_index]);
+//                data_index++;
+//            }
+//        }
+//        data[20] = '\0';
+//        lcd_printf("%s", data);
+//    }
 
-       while(count<21){
-
-          data[count] = uart_receive();
-
-           if(data[count]== '\r' ){
-               data[count]= '\0';
-               uart_sendChar('\r');
-               uart_sendChar('\n');
-               if(strcmp(data,"move")==0){
-                   move_forward(sensor_data, 50);
-               }
-
-
-              // lcd_printf("%s %d, %s %c", "index=", count,"char=", data[count]);
-
-               break;
-           }
-           else{
-
-               uart_sendChar(data[count]);
-               lcd_printf("%s %d, %s %c", "index=", count,"char=", data[count]);
-               count++;
-           }
-
-
-       }
-        data[20] = '\0';
-       lcd_printf("%s", data);
-
+    //Part 2
+//    while(1) {
+//            char data[21];
+//            int data_index = 0;
+//
+//            while(data_index < 20){
+//
+//                data[data_index] = uart_receive();
+//
+//                if(data[data_index] == '\r' ){
+//                    data[data_index] = '\0';
+//                    uart_sendChar('\r');
+//                    uart_sendChar('\n');
+//
+//                    lcd_printf("Index=%d, Char=%c", data_index, data[data_index]);
+//
+//                    break;
+//                }
+//                else{
+//                    uart_sendChar(data[data_index]);
+//                    lcd_printf("Index=%d, Char=%c", data_index, data[data_index]);
+//                    data_index++;
+//                }
+//            }
+//            data[20] = '\0';
+//            lcd_printf("%s", data);
+//        }
 
 
+    //Part 3
+//    while(1) {
+//
+//    }
 
-    }
+    //Part 5
+        while(1) {
+            char data[21];
+            int data_index = 0;
 
+            while(data_index < 20){
+
+                data[data_index] = uart_receive();
+
+                if(data[data_index] == '\r' ){
+                    data[data_index] = '\0';
+                    //uart_sendChar('\r');
+                    //uart_sendChar('\n');
+
+                    //lcd_printf("Index=%d, Char=%c", data_index, data[data_index]);
+
+                    break;
+                }
+                else{
+                    //uart_sendChar(data[data_index]);
+                    //lcd_printf("Index=%d, Char=%c", data_index, data[data_index]);
+                    data_index++;
+                }
+            }
+            data[20] = '\0';
+            lcd_printf("%s", data);
+
+            char command[20], dtm[100];
+            int parameter;
+
+            strcpy(dtm, data);
+            sscanf(dtm, "%s %d", command, &parameter);
+
+            if (strcmp(command, "forward") == 0) {
+                move_forward(sensor_data, (int)parameter);
+            }
+            else if (strcmp(command, "backward") == 0) {
+                move_backward(sensor_data, (int)parameter);
+            }
+            else if (strcmp(command, "right") == 0) {
+                turn_right(sensor_data, parameter);
+            }
+            else if (strcmp(command, "left") == 0) {
+                turn_left(sensor_data, parameter);
+            }
+
+        }
 }

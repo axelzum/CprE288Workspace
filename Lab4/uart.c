@@ -1,7 +1,17 @@
+/*
+* @file uart.c
+*
+* @brief Contains the functions called by main enable and use uart communication
+*
+* @author Axel Zumwalt, Allan Juarez
+* @date 2/21/2019
+*/
+
 #include "uart.h"
 #include "lcd.h"
 #include "movement.h"
 #include "open_interface.h"
+
 #define BIT0 0x01
 #define BIT1 0x02
 #define BIT2 0x04
@@ -11,6 +21,15 @@
 #define BIT6 0x40
 #define BIT7 0x80
 
+
+/**
+* Uart initilization functions. Enables rx and tx over UART1 and a uart interrupt.
+*
+* @author Axel Zumwalt, Allan Juarez
+*
+* @date 2/21/19
+*
+*/
 void uart_init(void) {
 
     //Turn on clock for UART1 and Port B
@@ -55,22 +74,35 @@ void uart_init(void) {
     IntMasterEnable(); //Globally allows CPU to service interrupts
 }
 
-
-//TODO
+/**
+* Handeler for UART1 interrupt.
+*
+* @author Axel Zumwalt, Allan Juarez
+*
+* @date 2/21/19
+*
+*/
 void UART1_handler() {
 
-   // if()
-//    UART1_ICR_R |= 0b10000;
+    //TODO there is a delay here.
+    //Part 3
+//   UART1_ICR_R |= 0b10000;
 //   char data = uart_receive();
 //   lcd_printf("%c", data);
-//   uart_sendChar( data);
-
-
-
-
+//   uart_sendChar(data);
 
 }
 
+/**
+* Sends a character over UART1
+*
+* @author Axel Zumwalt, Allan Juarez
+* @param
+*   data: Character to send.
+*
+* @date 2/21/19
+*
+*/
 void uart_sendChar(char data) {
 
     while(UART1_FR_R & 0x20){
@@ -80,6 +112,15 @@ void uart_sendChar(char data) {
 
 }
 
+/**
+* Recieves a char over UART1 and returns it.
+*
+* @author Axel Zumwalt, Allan Juarez
+* @return Character recieved over UART1.
+*
+* @date 2/21/19
+*
+*/
 char uart_receive(void) {
     char data =0;
 

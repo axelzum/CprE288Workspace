@@ -1,8 +1,10 @@
 /*
- * uart.h
+ * @file uart.h
  *
- *  Created on: Feb 21, 2019
- *      Author: axelzum
+ * @brief Header file contains the declarations for uart functions
+ *
+ * @date Feb 21, 2019
+ * @author Axel Zumwalt, Allan Juarez
  */
 
 #ifndef UART_H_
