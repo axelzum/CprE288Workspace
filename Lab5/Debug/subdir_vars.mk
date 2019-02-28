@@ -8,6 +8,9 @@ SHELL = cmd.exe
 CMD_SRCS += \
 ../tm4c123gh6pm.cmd 
 
+LIB_SRCS += \
+../lab5_scan_data.lib 
+
 C_SRCS += \
 ../button.c \
 ../lcd.c \

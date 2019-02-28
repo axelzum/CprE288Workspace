@@ -113,6 +113,24 @@ void uart_sendChar(char data) {
 }
 
 /**
+* Sends a string over UART1
+*
+* @author Axel Zumwalt, Allan Juarez
+* @param
+*   data: Character array to send.
+*
+* @date 2/28/19
+*
+*/
+void uart_sendString(char data[]) {
+
+    int i;
+    for(i = 0; i < strlen(data); i++) {
+        uart_sendChar(data[i]);
+    }
+}
+
+/**
 * Recieves a char over UART1 and returns it.
 *
 * @author Axel Zumwalt, Allan Juarez

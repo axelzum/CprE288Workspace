@@ -20,6 +20,8 @@ void uart_init(void);
 
 void uart_sendChar(char data);
 
+void uart_sendString(char string[]);
+
 char uart_receive(void);
 
 void init_uart_interrupts();
