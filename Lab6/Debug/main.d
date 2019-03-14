@@ -19,6 +19,13 @@ main.obj: ../timer.h
 main.obj: ../adc.h
 main.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdbool.h
 main.obj: C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/interrupt.h
+main.obj: ../movement.h
+main.obj: ../open_interface.h
+main.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdlib.h
+main.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/math.h
+main.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_defs.h
+main.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/machine/_limits.h
+main.obj: ../uart.h
 
 ../main.c: 
 ../lcd.h: 
@@ -39,3 +46,10 @@ C:/ti/TivaWare_C_Series-2.1.4.178/inc/tm4c123gh6pm.h:
 ../adc.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdbool.h: 
 C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/interrupt.h: 
+../movement.h: 
+../open_interface.h: 
+C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdlib.h: 
+C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/math.h: 
+C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_defs.h: 
+C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/machine/_limits.h: 
+../uart.h: 

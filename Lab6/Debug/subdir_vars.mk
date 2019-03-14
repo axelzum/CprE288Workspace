@@ -12,42 +12,60 @@ C_SRCS += \
 ../adc.c \
 ../lcd.c \
 ../main.c \
+../movement.c \
+../open_interface.c \
 ../timer.c \
-../tm4c123gh6pm_startup_ccs.c 
+../tm4c123gh6pm_startup_ccs.c \
+../uart.c 
 
 C_DEPS += \
 ./adc.d \
 ./lcd.d \
 ./main.d \
+./movement.d \
+./open_interface.d \
 ./timer.d \
-./tm4c123gh6pm_startup_ccs.d 
+./tm4c123gh6pm_startup_ccs.d \
+./uart.d 
 
 OBJS += \
 ./adc.obj \
 ./lcd.obj \
 ./main.obj \
+./movement.obj \
+./open_interface.obj \
 ./timer.obj \
-./tm4c123gh6pm_startup_ccs.obj 
+./tm4c123gh6pm_startup_ccs.obj \
+./uart.obj 
 
 OBJS__QUOTED += \
 "adc.obj" \
 "lcd.obj" \
 "main.obj" \
+"movement.obj" \
+"open_interface.obj" \
 "timer.obj" \
-"tm4c123gh6pm_startup_ccs.obj" 
+"tm4c123gh6pm_startup_ccs.obj" \
+"uart.obj" 
 
 C_DEPS__QUOTED += \
 "adc.d" \
 "lcd.d" \
 "main.d" \
+"movement.d" \
+"open_interface.d" \
 "timer.d" \
-"tm4c123gh6pm_startup_ccs.d" 
+"tm4c123gh6pm_startup_ccs.d" \
+"uart.d" 
 
 C_SRCS__QUOTED += \
 "../adc.c" \
 "../lcd.c" \
 "../main.c" \
+"../movement.c" \
+"../open_interface.c" \
 "../timer.c" \
-"../tm4c123gh6pm_startup_ccs.c" 
+"../tm4c123gh6pm_startup_ccs.c" \
+"../uart.c" 
 
 

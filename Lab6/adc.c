@@ -54,7 +54,7 @@ void adc_init(void) {
     // Choose a sample sequencer (SS0, SS1, SS2 or SS3)
     // Disable ADC sample sequencer SS0 while configuring
     // OK to use SS1 or SS2 (cannot use SS3 for multiple samples)
-    ADC0_ACTSS_R &= 0xFFFE; //Disable ADC0 SS0 by clearing bit 0 //TODO do we enable again?
+    ADC0_ACTSS_R &= 0xFFFE; //Disable ADC0 SS0 by clearing bit 0
     // Set ADC SS0 functionality
     ADC0_EMUX_R &= 0xFFF0; //Set SS0 to trigger using ADCPSSI reg.
     ADC0_SSMUX0_R |= 0x0000000A; // Sample channel 10
