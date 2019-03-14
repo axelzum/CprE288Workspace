@@ -70,6 +70,14 @@ void adc_init(void) {
 
 }
 
+/**
+ * Read distance from the IR Sensor
+ *
+ * @author Axel Zumwalt, Allan Juarez
+ *
+ * @date 3/7/19
+ *
+ */
 void adc_read(double *distance) {
     // Initiate SS0 conversion sequence
     ADC0_PSSI_R = 0x1;
