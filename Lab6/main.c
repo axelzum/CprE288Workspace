@@ -24,13 +24,13 @@ int main(void) {
     adc_init();
     uart_init();
 
-    oi_t *sensor_data = oi_alloc();
-    oi_init(sensor_data);
+    //oi_t *sensor_data = oi_alloc();
+    //oi_init(sensor_data);
 
-    double buffer[BUFF_SIZE];
-    int i;
+    //double buffer[BUFF_SIZE];
+    //int i;
     double average, distance;
-    double sum;
+    //double sum;
 
 //    double error_average = 0;;
 //    for (i = 0; i < 9; i++) {
@@ -63,15 +63,16 @@ int main(void) {
     while(1) {
 
 
-                for(i = 0; i < BUFF_SIZE; i++) {
-                    adc_read(&buffer[i]);
-                }
-                sum = 0;
-                for (i = 0; i < BUFF_SIZE; i++) {
-                    sum += buffer[i];
-                }
-                average = sum / BUFF_SIZE;
-                distance = 8*(pow(10, 6))*(pow(average, -1.714)); //+ error_average;
+//                for(i = 0; i < BUFF_SIZE; i++) {
+//                    adc_read(&buffer[i]);
+//                }
+//                sum = 0;
+//                for (i = 0; i < BUFF_SIZE; i++) {
+//                    sum += buffer[i];
+//                }
+//                average = sum / BUFF_SIZE;
+                adc_read(&average);
+                distance = 81189*(pow(average, -1.132)); //+ error_average;
 
                 lcd_printf("Value: %.3f, Distance: %.3f", average, distance);
 

@@ -64,6 +64,8 @@ void adc_init(void) {
     ADC0_SSCTL0_R = 0x00000000; // First clear register to 0
     ADC0_SSCTL0_R |= 0x00000006; // Set bits 1 and 2 for first sample
 
+    ADC0_SAC_R = 0x6;
+
     ADC0_ACTSS_R |= 0x1;
 
 }
