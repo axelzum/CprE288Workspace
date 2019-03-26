@@ -17,18 +17,12 @@ int main(void) {
     ping_init();
 
     while (1) {
-        GPIO_PORTB_DEN_R |= 0x8; //set pin 3 as output
+        ping_send();
 
-        GPIO_PORTB_DATA_R = 0x8;
-        timer_waitMicros(5000000);
-        GPIO_PORTB_DATA_R = 0x0;
-
-        GPIO_PORTB_DEN_R &= 0b11110111; //Set portb 3 to input
-
-        timer_waitMicros(10000000);
-
+        switch_function();
 
         ping_read();
-    }
 
+        switch_function();
+    }
 }

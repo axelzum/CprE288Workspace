@@ -15,12 +15,18 @@
 #include <stdbool.h>
 #include "driverlib/interrupt.h"
 
-volatile int state = 1;
+volatile int state = 0;
 volatile int time_first = 0;
 volatile int time_last = 0;
+
+void TIMER3B_Handler(void);
 
 void ping_init(void);
 
 void ping_read(void);
+
+void switch_function(void);
+
+void ping_send(void);
 
 #endif /* PING_H_ */
