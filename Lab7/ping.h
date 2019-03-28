@@ -14,10 +14,10 @@
 #include <inc/tm4c123gh6pm.h>
 #include <stdbool.h>
 #include "driverlib/interrupt.h"
-
-volatile int state = 0;
-volatile int time_first = 0;
-volatile int time_last = 0;
+//
+//volatile int state = 0;
+//volatile int time_first = 0;
+//volatile int time_last = 0;
 
 void TIMER3B_Handler(void);
 

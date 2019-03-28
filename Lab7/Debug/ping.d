@@ -19,6 +19,9 @@ ping.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_ti_config.h
 ping.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/linkage.h
 ping.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdarg.h
 ping.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/string.h
+ping.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/math.h
+ping.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_defs.h
+ping.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/machine/_limits.h
 
 ../ping.c: 
 ../ping.h: 
@@ -39,3 +42,6 @@ C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_ti_config.h:
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/linkage.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdarg.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/string.h: 
+C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/math.h: 
+C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_defs.h: 
+C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/machine/_limits.h: 

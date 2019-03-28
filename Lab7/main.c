@@ -17,12 +17,16 @@ int main(void) {
     ping_init();
 
     while (1) {
+
+        switch_function();
+
         ping_send();
 
         switch_function();
 
+        timer_waitMillis(500);
+
         ping_read();
 
-        switch_function();
     }
 }
