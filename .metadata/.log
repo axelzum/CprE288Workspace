@@ -2544,3 +2544,6 @@ Unable to communicate with the device. Please check your connection.
 !ENTRY com.ti.ccstudio.debug 1 0 2019-03-28 13:56:46.184
 !MESSAGE DS_ERROR: CORTEX_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
 
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-03-28 15:00:36.033
+!MESSAGE Indexed 'Lab8' (5 sources, 17 headers) in 0.593 sec: 946 declarations; 1,817 references; 0 unresolved inclusions; 4 syntax errors; 120 unresolved names (4.2%)
