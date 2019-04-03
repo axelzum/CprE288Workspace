@@ -1,7 +1,7 @@
 #include "lcd.h"
 #include "timer.h"
 #include "servo.h"
-
+#include "button.h"
 
 /**
  * @file main.c
@@ -15,6 +15,8 @@ int main(void) {
 
     lcd_init();
     servo_init();
+    button_init();
+    init_button_interrupts(button_event, button_num);
 
     while (1) {
 
