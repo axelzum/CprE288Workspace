@@ -1,8 +1,10 @@
 /*
- * servo.h
+ * @file ping.h
  *
- *  Created on: Mar 28, 2019
- *      Author: ajuarez
+ * @brief Header file for servo functions
+ *
+ * @author Axel Zumwalt, Allan Juarez
+ * @date 3/28/2019
  */
 
 #ifndef SERVO_H_
@@ -12,6 +14,9 @@
 #include <inc/tm4c123gh6pm.h>
 #include <stdbool.h>
 #include "driverlib/interrupt.h"
+
+extern volatile int servo_position;
+extern volatile int movement_direction;
 
 void servo_init(void);
 

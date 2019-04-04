@@ -20,7 +20,31 @@ int main(void) {
 
     while (1) {
 
+        if (button_num == 1) {
+            servo_position = servo_move(1);
+        }
+        else if (button_num == 2) {
+            servo_position = servo_move(2.5);
+        }
+        else if (button_num == 3) {
+            servo_position = servo_move(5);
+        }
+        else if (button_num == 4) {
+            if (movement_direction == 0) {
+                movement_direction == 1;
+            }
+            else {
+                movement_direction == 0;
+            }
+        }
+        else if (button_num == 5) {
+            servo_position = servo_move(0);
+        }
+        else if (button_num == 6) {
+            servo_position = servo_move(180);
+        }
 
+        lcd_printf("Servo position: %d\nDirection: %d", servo_position, movement_direction); //Todo direction
 
     }
 }
