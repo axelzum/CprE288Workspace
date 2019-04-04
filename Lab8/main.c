@@ -6,10 +6,12 @@
 /**
  * @file main.c
  *
- * Lab 7 main file.
+ * Lab 8 main file.
+ *
+ * USE ROBOT 13
  *
  * @author Axel Zumwalt, Allan Juarez
- * @date 3/14/19
+ * @date 3/28/19
  */
 int main(void) {
 
@@ -51,6 +53,12 @@ int main(void) {
 
         }
 
+        if (servo_position > 180) {
+            servo_position = servo_move(180);
+        }
+        else if (servo_position < 0) {
+            servo_position = servo_move(0);
+        }
 
         lcd_printf("Servo position: %d\nDirection: %d", servo_position, movement_direction);
 
