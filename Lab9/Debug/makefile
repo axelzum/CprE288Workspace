@@ -11,6 +11,7 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./adc.obj" \
+"./analysis.obj" \
 "./button.obj" \
 "./lcd.obj" \
 "./main.obj" \
@@ -163,8 +164,8 @@ Lab9.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "adc.obj" "button.obj" "lcd.obj" "main.obj" "ping.obj" "servo.obj" "timer.obj" "tm4c123gh6pm_startup_ccs.obj" "uart.obj" 
-	-$(RM) "adc.d" "button.d" "lcd.d" "main.d" "ping.d" "servo.d" "timer.d" "tm4c123gh6pm_startup_ccs.d" "uart.d" 
+	-$(RM) "adc.obj" "analysis.obj" "button.obj" "lcd.obj" "main.obj" "ping.obj" "servo.obj" "timer.obj" "tm4c123gh6pm_startup_ccs.obj" "uart.obj" 
+	-$(RM) "adc.d" "analysis.d" "button.d" "lcd.d" "main.d" "ping.d" "servo.d" "timer.d" "tm4c123gh6pm_startup_ccs.d" "uart.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

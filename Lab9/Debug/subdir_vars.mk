@@ -10,6 +10,7 @@ CMD_SRCS += \
 
 C_SRCS += \
 ../adc.c \
+../analysis.c \
 ../button.c \
 ../lcd.c \
 ../main.c \
@@ -21,6 +22,7 @@ C_SRCS += \
 
 C_DEPS += \
 ./adc.d \
+./analysis.d \
 ./button.d \
 ./lcd.d \
 ./main.d \
@@ -32,6 +34,7 @@ C_DEPS += \
 
 OBJS += \
 ./adc.obj \
+./analysis.obj \
 ./button.obj \
 ./lcd.obj \
 ./main.obj \
@@ -43,6 +46,7 @@ OBJS += \
 
 OBJS__QUOTED += \
 "adc.obj" \
+"analysis.obj" \
 "button.obj" \
 "lcd.obj" \
 "main.obj" \
@@ -54,6 +58,7 @@ OBJS__QUOTED += \
 
 C_DEPS__QUOTED += \
 "adc.d" \
+"analysis.d" \
 "button.d" \
 "lcd.d" \
 "main.d" \
@@ -65,6 +70,7 @@ C_DEPS__QUOTED += \
 
 C_SRCS__QUOTED += \
 "../adc.c" \
+"../analysis.c" \
 "../button.c" \
 "../lcd.c" \
 "../main.c" \

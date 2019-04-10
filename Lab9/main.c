@@ -55,7 +55,7 @@ int main(void) {
 
         switch_function();
 
-        timer_waitMillis(100);
+        timer_waitMicros(50000);
 
         char ping_distance[20];
         double ping_dist_float = ping_read();
@@ -76,8 +76,8 @@ int main(void) {
         uart_sendChar('\r');
         uart_sendChar('\n');
 
-        reading_array[reading_index].ir_distance = ir_distance;
-        reading_array[reading_index].sonar_distance = ping_distance;
+        reading_array[reading_index].ir_distance = distance;
+        reading_array[reading_index].sonar_distance = ping_dist_float;
         reading_index++;
 
         //Move servo
