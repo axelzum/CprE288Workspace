@@ -99,14 +99,12 @@ int main(void) {
 
         //Move servo
         servo_position = servo_move(1);
-        if (servo_position > 170) {
-            break;
-        }
     }
 
     struct object object_array[10];
     int num_objects = detect_objects(reading_array, object_array);
 
+    //Send all objects to UART
     for (i = 0; i < num_objects; i++) {
         char objects[20];
         sprintf(objects, "%d", object_array[i].degree_start);
@@ -118,6 +116,8 @@ int main(void) {
         uart_sendChar('\n');
 
     }
+
+    find_smallest(reading_array, object_array, num_objects);
 
     return 0;
 }

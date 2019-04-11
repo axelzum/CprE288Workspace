@@ -19,15 +19,17 @@ struct reading {
 struct object {
     int degree_start;
     int degree_stop;
+    /*
     float ir_start;
     float ir_stop;
     float sonar_start;
     float sonar_stop;
+    */
 };
 
 int detect_objects(struct reading *reading_array, struct object *object_array);
 
-void find_smallest(struct object *object_array);
+void find_smallest(struct reading *reading_array, struct object *object_array, int num_objects);
 
 
 #endif /* ANALYSIS_H_ */
