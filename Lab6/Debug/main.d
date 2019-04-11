@@ -26,6 +26,7 @@ main.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/math.h
 main.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_defs.h
 main.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/machine/_limits.h
 main.obj: ../uart.h
+main.obj: C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/interrupt.h
 
 ../main.c: 
 ../lcd.h: 
@@ -53,3 +54,4 @@ C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/math.h:
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_defs.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/machine/_limits.h: 
 ../uart.h: 
+C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/interrupt.h: 

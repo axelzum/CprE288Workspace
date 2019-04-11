@@ -73,27 +73,6 @@ int servo_move(float degrees) {
         servo_position -= degrees;
     }
 
-    if(servo_position >=180 && movement_direction ==1){
-        if(degrees ==0){
-            TIMER1_TBPMR_R = 0x0004;
-            TIMER1_TBMATCHR_R =  0xC2C0;
-            return 0;
-        }
-        TIMER1_TBPMR_R = 0x0004;
-        TIMER1_TBMATCHR_R = 0x5240;
-        return 180;
-    }
-    if(servo_position <=0 && movement_direction ==0){
-        if(degrees ==180){
-            TIMER1_TBPMR_R = 0x0004;
-            TIMER1_TBMATCHR_R = 0x524;
-            return 180;
-        }
-        TIMER1_TBPMR_R = 0x0004;
-        TIMER1_TBMATCHR_R =  0xC2C0;
-        return 0;
-    }
-
     int match = (-160)*servo_position + 312000;
     int match_r = match & 0xFFFF;
     int match_prescale = match >> 16;
@@ -111,6 +90,16 @@ int servo_move(float degrees) {
         return 0;
     }
     else {
+        if(servo_position >= 180){
+            TIMER1_TBPMR_R = 0x0004;
+            TIMER1_TBMATCHR_R = 0x5240;
+            return 180;
+        }
+        if(servo_position <= 0){
+            TIMER1_TBPMR_R = 0x0004;
+            TIMER1_TBMATCHR_R =  0xC2C0;
+            return 0;
+        }
         //move degrees
         TIMER1_TBPMR_R = match_prescale;
         TIMER1_TBMATCHR_R = match_r;

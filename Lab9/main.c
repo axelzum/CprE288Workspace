@@ -33,7 +33,12 @@ int main(void) {
     uart_sendChar('\r');
     uart_sendChar('\n');
 
-    double average, distance; //adc IR variables
+    double ir_raw, ir_distance; //adc IR variables
+    double ir_average;
+
+    double ping_average;
+
+    int i;
 
     struct reading reading_array[180];
     int reading_index = 0;
@@ -41,25 +46,36 @@ int main(void) {
     while (servo_position < 180) {
 
         //IR
-        adc_read(&average);
-        distance = 81189*(pow(average, -1.132)); //TODO calibrate
+        ir_average = 0;
+        for (i = 0; i < 5; i++) {
+            adc_read(&ir_raw);
+            ir_distance = 81189*(pow(ir_raw, -1.132)); //TODO calibrate
 
-        char ir_distance[20];
-        sprintf(ir_distance, "%f", distance);
+            ir_average += ir_distance;
+        }
+        ir_average /= 5;
+
+        char ir_char[20];
+        sprintf(ir_char, "%f", ir_average);
 
 
         //PING)))
-        switch_function();
+        ping_average = 0;
+        for (i = 0; i < 5; i++) {
+            switch_function();
 
-        ping_send();
+            ping_send();
 
-        switch_function();
+            switch_function();
 
-        timer_waitMicros(50000);
+            timer_waitMillis(20);
 
-        char ping_distance[20];
-        double ping_dist_float = ping_read();
-        sprintf(ping_distance, "%f", ping_dist_float);
+            ping_average += ping_read();
+        }
+        ping_average /= 5;
+
+        char ping_char[20];
+        sprintf(ping_char, "%f", ping_average);
 
 
         //Degrees
@@ -70,18 +86,37 @@ int main(void) {
         //Print to UART
         uart_sendString(degrees);
         uart_sendChar('\t');
-        uart_sendString(ir_distance);
+        uart_sendString(ir_char);
         uart_sendChar('\t');
-        uart_sendString(ping_distance);
+        uart_sendString(ping_char);
         uart_sendChar('\r');
         uart_sendChar('\n');
 
-        reading_array[reading_index].ir_distance = distance;
-        reading_array[reading_index].sonar_distance = ping_dist_float;
+        reading_array[reading_index].degrees = servo_position;
+        reading_array[reading_index].ir_distance = ir_average;
+        reading_array[reading_index].sonar_distance = ping_average;
         reading_index++;
 
         //Move servo
-        servo_position = servo_move(2);
+        servo_position = servo_move(1);
+        if (servo_position > 170) {
+            break;
+        }
+    }
+
+    struct object object_array[10];
+    int num_objects = detect_objects(reading_array, object_array);
+
+    for (i = 0; i < num_objects; i++) {
+        char objects[20];
+        sprintf(objects, "%d", object_array[i].degree_start);
+        uart_sendString(objects);
+        uart_sendChar('\t');
+        sprintf(objects, "%d", object_array[i].degree_stop);
+        uart_sendString(objects);
+        uart_sendChar('\r');
+        uart_sendChar('\n');
+
     }
 
     return 0;

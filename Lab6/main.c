@@ -74,7 +74,7 @@ int main(void) {
                 adc_read(&average);
                 distance = 81189*(pow(average, -1.132)); //+ error_average;
 
-                lcd_printf("Value: %.3f, Distance: %.3f", average, distance);
+                lcd_printf("Value: %.3f\nDistance: %.3f", average, distance);
 
                 char raw_value[20];
                 char sonar_distance[20];

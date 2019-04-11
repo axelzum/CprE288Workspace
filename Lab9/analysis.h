@@ -11,6 +11,7 @@
 #define ANALYSIS_H_
 
 struct reading {
+    int degrees;
     float ir_distance;
     float sonar_distance;
 };
@@ -24,7 +25,7 @@ struct object {
     float sonar_stop;
 };
 
-void detect_objects(struct reading *reading_array, struct object *object_array);
+int detect_objects(struct reading *reading_array, struct object *object_array);
 
 void find_smallest(struct object *object_array);
 
