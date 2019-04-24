@@ -72,7 +72,7 @@ int main(void) {
 //                }
 //                average = sum / BUFF_SIZE;
                 adc_read(&average);
-                distance = 81189*(pow(average, -1.132)); //+ error_average;
+                distance = 22475*(pow(average, -.905)) /2; //+ error_average;
 
                 lcd_printf("Value: %.3f\nDistance: %.3f", average, distance);
 

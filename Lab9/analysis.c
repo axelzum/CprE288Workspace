@@ -37,10 +37,10 @@ int detect_objects(struct reading *reading_array, struct object *object_array) {
         //Take a running average of the distance
         double ping_average = 0;
         int j;
-        for (j = i; j < (i + 5); j++) {
+        for (j = i; j < (i + 4); j++) {
             ping_average += reading_array[j].sonar_distance;
         }
-        ping_average /= 5;
+        ping_average /= 4;
 
         //Start Object detection if, no current object and distance is less than 70
         if (ping_average < 70 && object_detected == 0) {
@@ -111,7 +111,7 @@ void find_smallest(struct reading *reading_array, struct object *object_array, i
         }
         average_distance /= radial_size;
 
-        double width = tan((radial_size * 3.1415) / (2 * 180)) * 2 * average_distance /2;
+        double width = tan((radial_size * 3.1415) / (2 * 180)) * 2 * average_distance;
 
         if (width < smallest_width) {
             smallest_index = index;

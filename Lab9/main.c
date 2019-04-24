@@ -49,11 +49,12 @@ int main(void) {
         ir_average = 0;
         for (i = 0; i < 5; i++) {
             adc_read(&ir_raw);
-            ir_distance = 81189*(pow(ir_raw, -1.132)); //TODO calibrate
 
-            ir_average += ir_distance;
+
+            ir_average += ir_raw;
         }
         ir_average /= 5;
+        ir_distance = 22475*(pow(ir_average, -.905)) /2;
 
         char ir_char[20];
         sprintf(ir_char, "%f", ir_average);
