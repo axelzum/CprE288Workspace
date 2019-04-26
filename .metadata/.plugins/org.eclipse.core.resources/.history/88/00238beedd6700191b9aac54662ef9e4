@@ -102,7 +102,7 @@ void find_smallest(struct reading *reading_array, struct object *object_array, i
         double average_distance = 0;
         int radial_size = (object_array[index].degree_stop - object_array[index].degree_start);
         //If the object is really small its probably not real
-        if (radial_size < 2) {
+        if (radial_size < 10) {
             continue;
         }
 

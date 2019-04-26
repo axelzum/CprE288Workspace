@@ -37,10 +37,10 @@ int detect_objects(struct reading *reading_array, struct object *object_array) {
         //Take a running average of the distance
         double ir_average = 0;
         int j;
-        for (j = i; j < (i + 5); j++) {
+        for (j = i; j < (i + 4); j++) {
             ir_average += reading_array[j].ir_distance;
         }
-        ir_average /= 5;
+        ir_average /= 4;
 
         //Start Object detection if, no current object and distance is less than 70
         if (ir_average < 50 && object_detected == 0) {
@@ -102,7 +102,7 @@ void find_smallest(struct reading *reading_array, struct object *object_array, i
         double average_distance = 0;
         int radial_size = (object_array[index].degree_stop - object_array[index].degree_start);
         //If the object is really small its probably not real
-        if (radial_size < 2) {
+        if (radial_size < 10) {
             continue;
         }
 
